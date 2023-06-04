@@ -99,7 +99,7 @@ Portanto, temos apenas três combinações possíveis. A probabilidade da ocorr�
 ```math
 3\cdot\frac{5}{216}=0.06944..
 ```
-O processo que fizemos, bem como cada um dos cálculos, pode ser abstraído na **fórmula da distribuição binomial**, que possui a seguinte estrutura:
+O processo que acbamos de fazer é condensado na **fórmula da distribuição binomial**, que possui a seguinte estrutura:
 ```math
 \binom{n}{x}p^{x}q^{n-x}
 ```
