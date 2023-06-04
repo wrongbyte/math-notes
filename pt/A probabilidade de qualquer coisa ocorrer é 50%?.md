@@ -24,7 +24,7 @@ Porém, esse é um dos casos mais simples quando se trata de probabilidade. No m
 - um evento X ocorrer `n` vezes em `r` tentativas
 - um evento `x` ocorrer, dado que esse evento ocorre em média `λ` vezes em um dado intervalo
 
-Portanto, calcular a probabilidade de algo acontecer isoladamente já não se torna mais tão adequado.  E é daí que voltamos à questão do título.
+Portanto, calcular a probabilidade de algo acontecer isoladamente já não se torna mais tão simples.  E é daí que voltamos à questão do título.
 
 ## 50% de chance de se obter o número 2?
 No cenário anterior, nossa questão analisava a probabilidade de se obter o número 2 jogando um dado de seis faces. Apesar de já sabermos que a real probabilidade desse evento é 1/6, ainda podemos voltar à questão do título e aplicar a mesma lógica à situação que temos: **se há apenas "dois" resultados possíveis (obter-se 2 ou não), porque a probabilidade é 1/6 e não 50%?**
