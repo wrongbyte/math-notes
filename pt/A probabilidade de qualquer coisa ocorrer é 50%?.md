@@ -1,9 +1,10 @@
-# A probabilidade de qualquer coisa ocorrer é realmente 50%?
+# A probabilidade de qualquer coisa ocorrer é 50%?
 Vez ou outra, é comum ouvirmos que não faz sentido dizer que a probabilidade de algo ocorrer é, digamos, 0,00625%: só há a probabilidade do evento ocorrer ou não. São os únicos cenários possíveis.
 Mas será que essa afirmação é realmente correta? Vamos descobrir.
 
 ## O que é a probabilidade de algo?
 Um dos conceitos fundamentais da chamada probabilidade clássica é o que chamamos de *ponto amostral*. Um ponto amostral nada mais é do que o resultado *possível* e *único* de um experimento aleatório.
+
 Por exemplo, vamos imaginar que temos um dado de seis faces. Nesse caso, temos exatamente seis resultados possíveis: 1, 2, 3, 4, 5, 6. Cada um desses números é um **ponto amostral**.
 Matematicamente, um ponto amostral é um item do **espaço amostral**, que é um **conjunto** que agrupa *todos os resultados possíveis* de um experimento aleatório.
 
@@ -12,6 +13,7 @@ Matematicamente, um ponto amostral é um item do **espaço amostral**, que é um
 ```
 
 O que acontece, então, caso nosso intuito seja descobrir qual é a chance do nosso dado nos dar o número 2? Vamos por partes.
+
 Nesse cenário hipotético, do conjunto acima, o número 2 é especial porque ele nos mostra qual nosso "resultado desejado". Logo, ele não é somente um ponto amostral qualquer, ele é um *ponto amostral favorável*. Logo, do nosso conjunto de resultados possíveis (espaço amostral), temos exatamente **um ponto amostral favorável**. 
 
 A probabilidade da ocorrência de um evento se dá pela **razão entre a quantidade de pontos amostrais favoráveis e a quantidade total de pontos amostrais**. 
@@ -20,14 +22,15 @@ Ou seja, a probabilidade de tirarmos o número 2 é, como você imaginou, 1/6.
 Porém, esse é um dos casos mais simples quando se trata de probabilidade. No mundo real, eventos dificilmente ocorrem de forma isolada - e muitas vezes queremos saber as chances de:
 - um evento `x` ocorrer juntamente a um evento `y`
 - um evento X ocorrer `n` vezes em `r` tentativas
-- um evento `x` ocorrer, dado que esse evento ocorre em média `λ` vezes
+- um evento `x` ocorrer, dado que esse evento ocorre em média `λ` vezes em um dado intervalo
 
-Portanto, calcular a probabilidade de algo acontecer isoladamente já não se torna mais tão adequado.  E é daí que voltamos à nossa questão inicial, na qual um evento ocorria ou não ocorria.
+Portanto, calcular a probabilidade de algo acontecer isoladamente já não se torna mais tão adequado.  E é daí que voltamos à questão do título.
 
 ## 50% de chance de se obter o número 2?
 No cenário anterior, nossa questão analisava a probabilidade de se obter o número 2 jogando um dado de seis faces. Apesar de já sabermos que a real probabilidade desse evento é 1/6, ainda podemos voltar à questão do título e aplicar a mesma lógica à situação que temos: **se há apenas "dois" resultados possíveis (obter-se 2 ou não), porque a probabilidade é 1/6 e não 50%?**
 
 Para entendermos a reposta, é preciso ir por partes.
+
 Vamos separar os possíveis resultados do nosso experimento em duas categorias distintas: *sucesso* e *falha*. Cada uma dessas categorias define um conjunto disjunto e a união desses conjuntos resulta no nosso espaço amostral.
 Logo, o sucesso é definido por
 S ={2}
@@ -59,17 +62,23 @@ Passamos do cenário de uma única tentativa para três tentativas, das quais sa
 
 ## Distribuição binomial
 Temos os mesmos conjuntos para sucesso e falha que tínhamos anteriormente:
+
 S ={2}
+
 F ={1, 3, 4, 5, 6}
 
 além do mesmo espaço amostral:
+
 Ω = {1, 2, 3, 4, 5, 6}
 
 Além disso, sabemos que a probabilidade de sucesso em uma tentativa isolada é igual a 1/6 (e, consequentemente, a probabilidade de falha é 5/6).
-Podemos então, a partir daqui, utilizar um conceito probabilístico no qual combinamos eventos:
+Podemos então, a partir daqui, utilizar as regras básicas que definem a união de eventos:
+
 
 > A probabilidade de termos um evento **e** outro evento é igual ao **produto** de suas probabilidades.
+> 
 > A probabilidade de termos um evento **ou** outro evento é igual a **soma** de suas probabilidades.
+> 
 
 No nosso cenário hipotético, queremos que os eventos ocorram conjuntamente. Portanto, queremos um sucesso **e** outro sucesso **e** uma falha. Isso nos dá:
 
@@ -77,6 +86,7 @@ No nosso cenário hipotético, queremos que os eventos ocorram conjuntamente. Po
 \frac{1}{6}\cdot\frac{1}{6}\cdot\frac{5}{6}= \frac{5}{216}
 ```
 Que é a probabilidade de termos exatamente dois sucessos e uma falha, dada uma tentativa.
+
 Contudo, esse número por si só não leva em consideração que esse resultado pode ocorrer em várias ordens diferentes, sendo cada combinação um resultado possível para o experimento, que possui o seguinte espaço amostral (S = sucesso, F = falha):
 
 Ω={ SSS, SSF, SFS, SFF, FSS, FSF, FFS, FFF }
@@ -99,5 +109,10 @@ onde:
 - p é a probabilidade de sucesso em uma tentativa
 - q é a probabilidade de falha em uma tentativa
 
+<hr>
+
+O estudo de probabilidade nos dá ferramentas interessantes para calcular a chance de ocorrência de diversos tipos de eventos ou combinações de eventos. As fórmulas de algumas distribuições, como a de Poisson, usam informações como a média de ocorrências de um evento ao longo de um intervalo no seu cálculo. 
+
+Portanto, é possível ver que uma questão aparentemente simples como a do título é capaz de abrir inúmeros caminhos para que possamos descobrir como conceitos simples se entrelaçam formando as bases de inúmeros modelos matemáticos do campo das probabilidades.
 
 
