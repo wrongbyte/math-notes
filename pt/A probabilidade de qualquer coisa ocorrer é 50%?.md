@@ -5,9 +5,10 @@ Mas será que essa afirmação é realmente correta? Vamos descobrir.
 ## O que é a probabilidade de algo?
 Um dos conceitos fundamentais da chamada probabilidade clássica é o que chamamos de *ponto amostral*. Um ponto amostral nada mais é do que o resultado *possível* e *único* de um experimento aleatório.
 Por exemplo, vamos imaginar que temos um dado de seis faces. Nesse caso, temos exatamente seis resultados possíveis: 1, 2, 3, 4, 5, 6. Cada um desses números é um **ponto amostral**.
+Matematicamente, um ponto amostral é um item do **espaço amostral**, que é um **conjunto** que agrupa *todos os resultados possíveis* de um experimento aleatório.
 
 ```
-Ω = {1, 2, 3, 4, 5, 6} -> espaço amostral (conjunto com todos os resultados possíveis do experimento)
+Ω = {1, 2, 3, 4, 5, 6} -> espaço amostral
 ```
 
 O que acontece, então, caso nosso intuito seja descobrir qual é a chance do nosso dado nos dar o número 2? Vamos por partes.
