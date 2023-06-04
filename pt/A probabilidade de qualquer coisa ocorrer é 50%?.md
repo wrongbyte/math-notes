@@ -109,6 +109,8 @@ onde:
 - p é a probabilidade de sucesso em uma tentativa
 - q é a probabilidade de falha em uma tentativa
 
+Observe que a fórmula generaliza as etapas feitas anteriormente: calculamos o produto da combinação da quantidade de tentativas e quantidade de sucessos pelo produto da quantidade de sucessos e falhas esperados (elevados ao número de vezes que ocorrem).
+
 <hr>
 
 O estudo de probabilidade nos dá ferramentas interessantes para calcular a chance de ocorrência de diversos tipos de eventos ou combinações de eventos. As fórmulas de algumas distribuições, como a de Poisson, usam informações como a média de ocorrências de um evento ao longo de um intervalo no seu cálculo. 
