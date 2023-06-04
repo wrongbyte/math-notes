@@ -1,3 +1,4 @@
+# A probabilidade de qualquer coisa ocorrer é realmente 50%?
 Vez ou outra, é comum ouvirmos que não faz sentido dizer que a probabilidade de algo ocorrer é, digamos, 0,00625%: só há a probabilidade do evento ocorrer ou não. São os únicos cenários possíveis.
 Mas será que essa afirmação é realmente correta? Vamos descobrir.
 
