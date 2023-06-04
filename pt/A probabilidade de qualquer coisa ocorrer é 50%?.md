@@ -41,7 +41,7 @@ A afirmação de que a chance de algo ocorrer é 50% presume algumas coisas:
 Agora, imagine que vamos jogar o dado e ver qual número obtemos a partir dessa tentativa.
 Embora temos duas *categorias* possíveis de resultados (sucesso ou falha), **temos apenas 1 maneira de se obter um "sucesso" e cinco maneiras de se obter uma "falha".** Portanto, pela diferença de pontos amostrais favoráveis, **suas probabilidades não são iguais.** Ou seja, temos 1/6 de chance de sucesso e 5/6 de chance de falha.
 
-![diagram](https://github.com/wrongbyte/statistics-notes/assets/57643375/12077898-2840-4910-9774-68dd2c36af9b)
+![image](https://github.com/wrongbyte/statistics-notes/assets/57643375/926185c3-3af4-48fa-ba8c-c9df20ca288b)
 
 Portanto, assumir que o resultado de um experimento é um "sucesso" ou "falha" faz sentido, pois podemos de fato dividir os resultados nas duas categorias. Contudo, assumir que ter apenas duas espécies de resultado implica em ter chances iguais para sucesso e falha é um erro.
 
