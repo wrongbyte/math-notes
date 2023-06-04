@@ -42,3 +42,62 @@ Agora, imagine que vamos jogar o dado e ver qual número obtemos a partir dessa 
 Embora temos duas *categorias* possíveis de resultados (sucesso ou falha), **temos apenas 1 maneira de se obter um "sucesso" e cinco maneiras de se obter uma "falha".** Portanto, pela diferença de pontos amostrais favoráveis, **suas probabilidades não são iguais.** Ou seja, temos 1/6 de chance de sucesso e 5/6 de chance de falha.
 
 ![diagram](https://github.com/wrongbyte/statistics-notes/assets/57643375/12077898-2840-4910-9774-68dd2c36af9b)
+
+Portanto, assumir que o resultado de um experimento é um "sucesso" ou "falha" faz sentido, pois podemos de fato dividir os resultados nas duas categorias. Contudo, assumir que ter apenas duas espécies de resultado implica em ter chances iguais para sucesso e falha é um erro.
+
+## Definindo sucesso e falha matematicamente: tentativas de Bernoulli
+O conceito de ter uma tentativa com conjuntos de resultados divididos entre sucesso e falha tem um nome no campo das probabilidades: *tentativa de Bernoulli*.
+
+> Uma tentativa de Bernoulli é uma tentativa na qual temos dois possíveis resultados: sucesso e falha. A probabilidade de sucesso é representada por `p` e a probabilidade de falha é representada por `q`. A soma de ambas deve ser sempre igual a 1.
+
+O conceito de tentativa de Bernoulli é especialmente importante quando falamos de distribuições de probabilidade como a *distribuição binomial*. Apesar do nome complicado, a distribuição binomial representa um conceito simples, apoiado no que vimos até agora sobre tentativa e falha: ela permite calcular a probabilidade de cenários hipotéticos que **combinam x sucessos e y falhas em r tentativas.**
+Vamos ver um exemplo prático, reformulando nossa questão inicial:
+
+> "Se rolarmos nosso dado de seis faces *três* vezes, qual a probabilidade de obtermos o número 2 *duas vezes*?"
+
+Passamos do cenário de uma única tentativa para três tentativas, das quais sabemos que em duas queremos obter sucesso e em uma queremos obter falha. Como calcular a probabilidade de um cenário assim? Veremos a seguir:
+
+## Distribuição binomial
+Temos os mesmos conjuntos para sucesso e falha que tínhamos anteriormente:
+S ={2}
+F ={1, 3, 4, 5, 6}
+
+além do mesmo espaço amostral:
+Ω = {1, 2, 3, 4, 5, 6}
+
+Além disso, sabemos que a probabilidade de sucesso em uma tentativa isolada é igual a 1/6 (e, consequentemente, a probabilidade de falha é 5/6).
+Podemos então, a partir daqui, utilizar um conceito probabilístico no qual combinamos eventos:
+
+> A probabilidade de termos um evento **e** outro evento é igual ao **produto** de suas probabilidades.
+> A probabilidade de termos um evento **ou** outro evento é igual a **soma** de suas probabilidades.
+
+No nosso cenário hipotético, queremos que os eventos ocorram conjuntamente. Portanto, queremos um sucesso **e** outro sucesso **e** uma falha. Isso nos dá:
+
+```math
+\frac{1}{6}\cdot\frac{1}{6}\cdot\frac{5}{6}= \frac{5}{216}
+```
+Que é a probabilidade de termos exatamente dois sucessos e uma falha, dada uma tentativa.
+Contudo, esse número por si só não leva em consideração que esse resultado pode ocorrer em várias ordens diferentes, sendo cada combinação um resultado possível para o experimento, que possui o seguinte espaço amostral (S = sucesso, F = falha):
+
+Ω={ SSS, SSF, SFS, SFF, FSS, FSF, FFS, FFF }
+
+Dos quais apenas os seguintes resultados atendem nossas condições:
+
+S={ SSF, SFS, FSS }
+
+Portanto, temos apenas três combinações possíveis. A probabilidade da ocorrência de uma delas - dado que são mutuamente exclusivas - é igual à **soma** de suas probabilidades (que são de 5/216 para cada uma das combinações), nos dando:
+```math
+3\cdot\frac{5}{216}=0.06944..
+```
+O processo que fizemos, bem como cada um dos cálculos, pode ser abstraído na **fórmula da distribuição binomial**, que possui a seguinte estrutura:
+```math
+\binom{n}{x}p^{x}q^{n-x}
+```
+onde:
+- n é a quantidade de tentativas
+- x é a quantidade de sucessos
+- p é a probabilidade de sucesso em uma tentativa
+- q é a probabilidade de falha em uma tentativa
+
+
+
