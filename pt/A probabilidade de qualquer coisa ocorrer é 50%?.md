@@ -1,12 +1,12 @@
 Vez ou outra, é comum ouvirmos que não faz sentido dizer que a probabilidade de algo ocorrer é, digamos, 0,00625%: só há a probabilidade do evento ocorrer ou não. São os únicos cenários possíveis.
 Mas será que essa afirmação é realmente correta? Vamos descobrir.
 
-## Parte 1: o que é a probabilidade de algo?
+## O que é a probabilidade de algo?
 Um dos conceitos fundamentais da chamada probabilidade clássica é o que chamamos de *ponto amostral*. Um ponto amostral nada mais é do que o resultado *possível* e *único* de um experimento aleatório.
 Por exemplo, vamos imaginar que temos um dado de seis faces. Nesse caso, temos exatamente seis resultados possíveis: 1, 2, 3, 4, 5, 6. Cada um desses números é um **ponto amostral**.
 
 ```
-Ω = {1, 2, 3, 4, 5, 6} -> espaço amostral
+Ω = {1, 2, 3, 4, 5, 6} -> espaço amostral (conjunto com todos os resultados possíveis do experimento)
 ```
 
 O que acontece, então, caso nosso intuito seja descobrir qual é a chance do nosso dado nos dar o número 2? Vamos por partes.
@@ -19,3 +19,24 @@ Porém, esse é um dos casos mais simples quando se trata de probabilidade. No m
 - um evento `x` ocorrer juntamente a um evento `y`
 - um evento X ocorrer `n` vezes em `r` tentativas
 - um evento `x` ocorrer, dado que esse evento ocorre em média `λ` vezes
+
+Portanto, calcular a probabilidade de algo acontecer isoladamente já não se torna mais tão adequado.  E é daí que voltamos à nossa questão inicial, na qual um evento ocorria ou não ocorria.
+
+## 50% de chance de se obter o número 2?
+No cenário anterior, nossa questão analisava a probabilidade de se obter o número 2 jogando um dado de seis faces. Apesar de já sabermos que a real probabilidade desse evento é 1/6, ainda podemos voltar à questão do título e aplicar a mesma lógica à situação que temos: **se há apenas "dois" resultados possíveis (obter-se 2 ou não), porque a probabilidade é 1/6 e não 50%?**
+
+Para entendermos a reposta, é preciso ir por partes.
+Vamos separar os possíveis resultados do nosso experimento em duas categorias distintas: *sucesso* e *falha*. Cada uma dessas categorias define um conjunto disjunto e a união desses conjuntos resulta no nosso espaço amostral.
+Logo, o sucesso é definido por
+S ={2}
+e a falha é definida por:
+F ={1, 3, 4, 5, 6}
+
+A afirmação de que a chance de algo ocorrer é 50% presume algumas coisas:
+- a probabilidade de sucesso é 50%
+- a probabilidade de falha é 50%
+
+Agora, imagine que vamos jogar o dado e ver qual número obtemos a partir dessa tentativa.
+Embora temos duas *categorias* possíveis de resultados (sucesso ou falha), **temos apenas 1 maneira de se obter um "sucesso" e cinco maneiras de se obter uma "falha".** Portanto, pela diferença de pontos amostrais favoráveis, **suas probabilidades não são iguais.** Ou seja, temos 1/6 de chance de sucesso e 5/6 de chance de falha.
+
+![diagram](https://github.com/wrongbyte/statistics-notes/assets/57643375/12077898-2840-4910-9774-68dd2c36af9b)
