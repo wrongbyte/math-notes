@@ -30,6 +30,12 @@ P(y_{a} = y_{b}) = \frac{1}{10^{k}}
 ```
 Com isso, podemos ver que $\lim_{k \to \infty}  \frac{1}{10^{k}} = 0$, logo, dado que nossa sequência de dígitos seja infinita, a probabilidade de gerarmos dois números repetidos é nula.
 
+
+#TODO
+```math
+f: \mathbb{N} \to {0,1} | \forall x = \sum_{i=0}^{\infty} \frac{f(n)}{10^{n}}
+```
+
 #TODO
 
 ### referências
