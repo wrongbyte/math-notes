@@ -151,7 +151,7 @@ A definição de X é: cada elemento x deve estar em A, mas não deve estar em f
 
 ### Quais elementos de A estão em X?
 Vamos assumir que $f: A \to B$ é bijetiva. Se nossa função de A para P(A) é bijetiva, todo subconjunto de A corresponde a um elemento de A e todo elemento de A corresponde a um subconjunto de A.
-Contudo
+Contudo,
 
 
 
