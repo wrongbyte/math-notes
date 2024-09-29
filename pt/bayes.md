@@ -1,4 +1,4 @@
-# Teorema de Bayes: pensando com estatística
+# Teorema de Bayes: pensando com estatística 🐈‍⬛
 
 Dado que tenhamos um dado de seis faces e o jogamos, sabemos que temos 6 possíveis resultados, e sabemos também que cada um desses resultados possui a mesma chance de ocorrer. 
 
@@ -108,10 +108,26 @@ P(A \mid B) = \frac{P(A) \cdot P(B \mid A)}{P(B)}
 
 Essa fórmula é equivalente a fórmula da probabilidade condicional, e ambas são usadas para calcularmos a probabilidade da ocorrência de um evento quando sabemos da ocorrência de outro evento. A diferenca fundamental é que a fórmula de Bayes nos dá uma relacão que utiliza de outra probabilidade condicional. Parece muito abstrato? Vamos ver a aplicacão em alguns exemplos.
 
-## Utilizando o teorema de Bayes na prática
+## Antes de prosseguir: a poção da probabilidade total 🔮🪄
+Agora que já sabemos o que é probabilidade condicional e como calculá-la, é hora de imaginar um cenário curioso: suponhamos que exista uma "poção mágica da verdade". Essa poção é usada para descobrir quem é culpado de algum crime;
+
+![potion](https://community.akamai.steamstatic.com/economy/image/a5HYp9Sw61Iks7TiNF57DFqT7uTUsBt13CvwcWpsxqwUkg/360fx360f)
+
+Contudo, esta poção tem um funcionamento específico: **ela funciona 90% das vezes quando aplicada em uma pessoa culpada e 99% das vezes quando aplicada em uma pessoa inocente**.
+
+Dito isso, temos duas perguntas a responder:
+
+1 - Qual é a probabilidade de o soro dar a resposta certa?
+
+2 - Se o soro indica “culpado”, qual é a probabilidade de o suspeito ser
+inocente?
+
+## Mais exemplos utilizando o teorema de Bayes na prática
 TODO
 
 ### Referências
 https://byjus.com/maths/multiplication-rule-probability/#:~:text=What%20is%20the%20Multiplication%20Rule,given%20that%20event%20B%20occurs.
 
 https://www.hep.upenn.edu/~johnda/Papers/Bayes.pdf
+
+https://cesad.ufs.br/ORBI/public/uploadCatalago/10161710102012Probabilidade_e_Estatistica_aula_9.pdf
