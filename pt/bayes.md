@@ -117,10 +117,24 @@ Contudo, esta poção tem um funcionamento específico: **ela funciona 90% das v
 
 Dito isso, temos duas perguntas a responder:
 
-1 - Qual é a probabilidade de o soro dar a resposta certa?
+**1 - Qual é a probabilidade de a poção nos dar a resposta certa?**
 
-2 - Se o soro indica “culpado”, qual é a probabilidade de o suspeito ser
-inocente?
+**2 - Se a poção indica “culpado”, qual é a probabilidade de o suspeito ser
+inocente?**
+
+
+Nesse cenário, temos os seguintes eventos possíveis:
+
+- $C$ = "suspeito culpado"
+- $\bar{C}$ = "suspeito inocente"
+- $V$ = "poção indicou que o suspeito é culpado"
+- $\bar{V}$ = "poção indicou que o suspeito é inocente"
+
+> :bulb: A notacão $\bar{A}$ significa o *complementar* do evento $A$, que é basicamente o evento "não A". Por exemplo, se definirmos $A$ como obter cara no lançamento de uma moeda, $\bar{A}$ seria obter coroa. Note que isso implica que os eventos $A$ e $\bar{A}$ são **mutuamente exclusivos**.
+
+Vamos começar representando os eventos acima em uma árvore:
+
+![árvore das probabilidades](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/bq4v7gy3mtv0atliwh0c.png)
 
 ## Mais exemplos utilizando o teorema de Bayes na prática
 TODO
