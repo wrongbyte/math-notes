@@ -41,6 +41,7 @@ A probabilidade de tirarmos 2 ou 6 no nosso dado é $$\frac{2}{3}$$.
 ## Fazendo perguntas mais complexas
 Vamos jogar um jogo de advinhação.
 
+[TODO: corrigir exemplo]
 Supondo que jogamos o dado uma vez, e o resultado foi **um número par**, qual a probabilidade desse número ser 2?
 A primeira etapa lógica para resolver esse exercício é reduzir nosso espaco amostral de 
 ```math
@@ -93,7 +94,7 @@ P(A \mid B) = \frac{P(A \cap B)}{P(B)} = \frac{\frac{3}{6}}{\frac{4}{6}} = \frac
 ```
 
 ## O teorema de Bayes
-A fórmula da probabilidade condicional que vimos possui uma propriedade interessante. Ao colocarmos a probabilidade da ocorrência de A e B em evidência:
+A fórmula da probabilidade condicional que vimos possui uma propriedade interessante. Ao colocarmos a probabilidade da ocorrência de A e B em evidência [(regra da cadeia)](https://github.com/wrongbyte/math-notes/blob/main/pt/chain-rule.md):
 ```math
 P(A \cap B) = P(B) \cdot P(A \mid B)
 ```
@@ -113,7 +114,7 @@ Agora que já sabemos o que é probabilidade condicional e como calculá-la, é 
 
 ![potion](https://community.akamai.steamstatic.com/economy/image/a5HYp9Sw61Iks7TiNF57DFqT7uTUsBt13CvwcWpsxqwUkg/360fx360f)
 
-Contudo, esta poção tem um funcionamento específico: **ela funciona 90% das vezes quando aplicada em uma pessoa culpada e 99% das vezes quando aplicada em uma pessoa inocente**.
+Contudo, esta poção tem um funcionamento específico: **ela funciona 90% das vezes quando aplicada em uma pessoa culpada e 99% das vezes quando aplicada em uma pessoa inocente**. Um suspeito é retirado de um grupo de pessoas, onde 95% jamais cometeram qualquer crime.
 
 Dito isso, temos duas perguntas a responder:
 
@@ -135,6 +136,71 @@ Nesse cenário, temos os seguintes eventos possíveis:
 Vamos começar representando os eventos acima em uma árvore:
 
 ![árvore das probabilidades](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/bq4v7gy3mtv0atliwh0c.png)
+
+Os cenários onde a pocão nos dá as respostas certas são os destacados em amarelo:
+
+![image](https://github.com/user-attachments/assets/c8481beb-2aa4-4357-9882-e917074de807)
+
+Ou seja, a probabilidade total de termos o resultado correto é a soma da probabilidade dos dois caminhos acima (pois são caminhos mutuamente exclusivos).
+
+```math
+P(A) = P(C \cap V) \cup P(\overline{C} \cap \overline{V})
+```
+
+Sabemos que a probabilidade da pocão funcionar em um suspeito inocente - $P(\overline{C} \mid \overline{V})$ - é de 99%, e a probabilidade de funcionar em um suspeito culpado - $P(C \mid V)$ - é de 99%. Veja que temos as probabilidades _condicionais_, mas não temos as probabilidades $P(C \cap V)$ e $P(\overline{C} \cap \overline{V})$. Como encontrá-las?
+
+### Regra da cadeia
+Dado a fórmula da probabilidade condicional,
+```math
+P(A \mid B) = \frac{P(A \cap B)}{P(B)}
+```
+temos a seguinte igualdade:
+```math
+P(A \cap B) = P(B) \cdot P(A \mid B)
+```
+
+Ou seja, 
+```math
+P(V \cap C) = P(C) \cdot P(V \mid C) = 0.05 \cdot 0.90 = 0.045
+```
+Outra forma de visualizar isso é transformando nossa árvore de decisão em um grafo ponderado:
+
+![image](https://github.com/user-attachments/assets/c450057a-4326-480b-b996-4970430804cc)
+
+Para sabermos a probabilidade $P(C \cap V)$ multiplicamos os valores de suas arestas, ou seja, $0.05 \cdot 0.90$, que é o equivalente a termos usado a regra da cadeia.
+Fazendo o mesmo para $P(\overline{C} \cap \overline{V})$:
+```math
+P(\overline{V} \cap \overline{C}) = P(\overline{C}) \cdot P(\overline{V} \mid \overline{C}) = 0.95 \cdot 0.99 = 0.9405
+```
+
+Somando ambas as probabilidades, obtemos $0.9855$. Ou seja, temos 98,5% de chance de obter o resultado correto com a nossa pocão.
+
+### Lei da probabilidade total
+A regra da cadeia é extremamente útil na **lei da probabilidade total**.
+Com as informacoes que temos, podemos nos perguntar: **qual a probabilidade da nossa pocao apontar que um suspeito é culpado**? 
+Veja que só sabemos as probabilidades condicionais: os valores 90% e 99% são de eventos _condicionados_, ou seja, dependem da probabilidade _a priori_, que é o suspeito ser culpado ou não. Porém, aqui queremos saber a probabilidade **sem saber se o suspeito é culpado ou não**. Como encontrar esse número?
+
+Considerando P(V) como a probabilidade da pocao apontar que o suspeito é culpado:
+```math
+P(V) = P(C) \cdot P(V \mid C) + P(\overline{C}) \cdot P(V \mid \overline{C})
+```
+```math
+P(V) = 0.05 \cdot 0.90 + 0.95 \cdot 0.01 = 0.0545
+```
+ou seja, temos 5,45% de chance da nossa pocão indicar que algum suspeito é culpado.
+Esse cálculo é a base da **lei da probabilidade total**:
+```math
+P(A) = P(A\cap B) + P(A \cap \overline{B})
+```
+utilizando a regra de cadeia:
+```math
+P(A) = P(B) \cdot P(A\mid B) + P(\overline{B}) \cdot P(A \mid \overline{B})
+```
+
+que pode ser generalizado para:
+```math
+P(A) = \sum_{i=1}^{n} P(A \mid B_i) \cdot P(B_i)
+```
 
 ## Mais exemplos utilizando o teorema de Bayes na prática
 TODO
