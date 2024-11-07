@@ -1,8 +1,8 @@
 # Teorema de Bayes: pensando com estatística 🐈‍⬛
 
-Dado que tenhamos um dado de seis faces e o jogamos, sabemos que temos 6 possíveis resultados, e sabemos também que cada um desses resultados possui a mesma chance de ocorrer. 
+Suponha que tenhamos um dado de seis faces e o jogamos. 
+Como temos 6 possíveis resultados, e cada um desses resultados possui a mesma chance de ocorrer, a probabilidade de obtermos o número 6 é igual a $\frac{1}{6}$.
 
-Por exemplo, a probabilidade de obtermos o número 6 é igual a $$\frac{1}{6}$$.
 Contudo, podemos fazer outras perguntas com base nas informações que temos. Qual é a probabilidade de jogarmos nosso dado **duas vezes** e obtermos o número 6 **nas duas vezes**?
 ### Regras básicas: adição e multiplicação
 Para resolver o problema acima, podemos utilizar de duas regras básicas de probabilidade, que envolvem a _adicão_ de probabilidades e a _soma_ de probabilidades.
@@ -39,31 +39,19 @@ P = \frac{1}{6} + \frac{1}{6} = \frac{2}{3}
 A probabilidade de tirarmos 2 ou 6 no nosso dado é $$\frac{2}{3}$$.
 
 ## Fazendo perguntas mais complexas
-Vamos jogar um jogo de advinhação.
+Suponha que agora temos dois dados. Jogamos o primeiro dado e ele nos dá um número par.
+Agora, jogamos o segundo dado e ele nos dá o número 2. Qual a probabilidade dessa situacão ocorrer?
 
-[TODO: corrigir exemplo]
-Supondo que jogamos o dado uma vez, e o resultado foi **um número par**, qual a probabilidade desse número ser 2?
-A primeira etapa lógica para resolver esse exercício é reduzir nosso espaco amostral de 
-```math
-S = \left\{ 1,2,3,4,5,6\right\} 
-```
-para
-```math
-S = \left\{ 2,4,6\right\} 
-```
-
-Ou seja, sabemos que dos seis números iniciais, apenas três são pares. Portanto, calculamos nossa probabilidade com base nessa informacão, obtendo o resultado $$\frac{1}{3}$$.
-
-## Probabilidade condicional
+### Probabilidade condicional
 Note que no último exemplo, o fato de reduzirmos os resultados possíveis a _apenas os números pares_ influenciou diretamente na probabilidade de obtermos o número 2. Ela dobrou!
-Temos nesse caso um exemplo de **probabilidade condicional**.
+Temos nesse caso um exemplo de **probabilidade condicional**. A fórmula para encontrarmos a probabilidade $P(A \mid B)$ é a seguinte:
 
 ```math
 P(A \mid B) = \frac{P(A \cap B)}{P(B)}
 ```
-> :bulb: PS: a notacão $$P(A \mid B)$$ significa **a probabilidade de A dado B**. Por exemplo, a probabilidade de termos tirarmos o número 2 **dado que** o número que tiramos é par.
+> :bulb: PS: a notacão $$P(A \mid B)$$ significa **a probabilidade de A dado B**. Por exemplo, a probabilidade de termos tirarmos o número 2 **dado que** o número que tiramos no primeiro dado é par.
 
-Observe a fórmula acima. Ela nos indica que a probabilidade de A, dado B, é igual a probabilidade da ocorrência de **A e B** sobre a probabilidade da ocorrência de B. Nessa equacão, **assumimos que o evento B ocorreu**, ou seja, nosso espaço amostral se torna reduzido. Como no último exemplo, se antes tínhamos 6 números possíveis, agora passamos a ter apenas 3, porque **sabemos que o número tirado é um número par.** Podemos dizer que essa é uma _probabilidade a posteriori_, ou seja, uma probabilidade calculada após sabermos novas informacões.
+Observe a fórmula acima. Ela nos indica que a probabilidade de A, dado B, é igual a probabilidade da ocorrência de **A e B** sobre a probabilidade da ocorrência de B. Nessa equacão, **assumimos que o evento B ocorreu**, ou seja, nosso espaço amostral se torna reduzido. Podemos dizer que essa é uma _probabilidade a posteriori_, ou seja, uma probabilidade calculada após sabermos novas informacões.
 
 ### Usando a fórmula para calcular um caso simples
 Vamos imaginar mais um cenário com nosso dado de seis faces. 
