@@ -202,7 +202,7 @@ que pode ser generalizado para:
 P(A) = \sum_{i=1}^{n} P(A \mid B_i) \cdot P(B_i)
 ```
 
-## Mais exemplos utilizando o teorema de Bayes na prática
+## Exemplos práticos com o Teorema de Bayes
 TODO
 
 ### Referências
