@@ -1,5 +1,3 @@
-# Regra da cadeia (probabilidade)
-
 ## O que é "probabilidade condicional" e qual sua utilidade? 🎲
 
 Probabilidade condicional se refere à **probabilidade da ocorrência de um evento A**, dado que **sabemos que um evento B ocorreu**. Um exemplo simples é quando temos um dado de seis faces e nos perguntamos qual a probabilidade de tirarmos o número 2. Bom, se temos 6 números igualmente possíveis e queremos saber a probabilidade de tirarmos um deles (o número 2), logo nossa probabilidade é de $\frac{1}{6}$. 
