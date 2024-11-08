@@ -252,7 +252,7 @@ P(B|L) \approx \frac{0,028}{0,067} \approx 0,418
 ```
 
 Portanto, a probabilidade de que ele tenha pego o ônibus, dado que se atrasou, é aproximadamente 41,8%.
-
+A segunda questão fica como exercício para o leitor.
 
 ### Referências
 [Lista de exercícios na íntegra](https://mathcenter.oxford.emory.edu/site/math117/probSetBayesTheorem/)
