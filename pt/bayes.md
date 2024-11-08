@@ -199,7 +199,7 @@ Pense no seguinte problema:
 2 - Qual é a probabilidade de que ele tenha andado a pé, dado que chegou no horário?
 
 <hr>
-Vamos definir os **eventos**:
+Vamos definir os eventos:
 
 - W: a pessoa foi ao trabalho andando
 - C: a pessoa foi ao trabalho de carro
@@ -207,7 +207,7 @@ Vamos definir os **eventos**:
 - L: a pessoa se atrasou
 - $\overline{L}$: a pessoa chegou no horário
 
-Probabilidades **conhecidas**:
+Probabilidades conhecidas:
 
 - P(W) = 0,3: 30% das vezes ele vai andando.
 - P(C) = 0,3: 30% das vezes ele vai de carro.
