@@ -21,9 +21,8 @@ Substituindo os valores com o nosso exemplo do dado, obtemos:
 > A = probabilidade de tirar o número 2 no segundo dado
 
 ```math
-P(A \mid B) = \frac{P(\frac{1}{6} \cdot \frac{1}{2})}{P(\frac{1}{2})} = \frac{1}{12}
+P(A \mid B) = \frac{P(\frac{1}{6} \cdot \frac{1}{2})}{P(\frac{1}{2})} = \frac{1}{6}
 ```
-Veja que a probabilidade de termos o número 2 _dado que tivemos um número par no primeiro dado_ é metade da probabilidade da situacão anterior!
 
 ### Qual a diferenca entre a probabilidade de A e B, ou P(A,B) e a probabilidade de A dado B, ou P(A|B)?
 ![image](https://github.com/user-attachments/assets/d36db160-ad59-465f-b08d-a4f45c633e54) 
