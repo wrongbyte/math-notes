@@ -44,6 +44,7 @@ A fórmula que vimos acima é uma igualdade, ou seja, podemos obter a relacao ab
 P(B) \cdot P(A \mid B) = P(A \cap B)
 ```
 Agora conseguimos encontrar a probabilidade de A e B ocorrerem se soubermos a probabilidade P(A | B)! Isso se torna extremamente útil quando falamos sobre a [lei da probabilidade total](https://en.wikipedia.org/wiki/Law_of_total_probability). Podemos visualizar como a fórmula acima funciona utilizando árvores de decisão:
+
 ![decision tree](https://github.com/user-attachments/assets/8005a326-0a8b-4bed-8cce-00f80e48f1d7)
 
 No exemplo acima[²](https://www.youtube.com/watch?v=7t9jyikrG7w), temos três máquinas, e sabemos a probabilidade delas serem defeituosas. Por exemplo, sabemos que a chance da máquina 1 ser defeituosa é 0.7. Isso seria equivalente a $P(D|M_{1}) = 0.7$. 
