@@ -191,9 +191,72 @@ P(A) = \sum_{i=1}^{n} P(A \mid B_i) \cdot P(B_i)
 ```
 
 ## Exemplos práticos com o Teorema de Bayes
-TODO
+Pense no seguinte problema:
+> Uma pessoa usa seu carro 30% do tempo, anda a pé 30% do tempo e pega o ônibus 40% do tempo para ir ao trabalho. Ele se atrasa 10% das vezes quando anda a pé; ele se atrasa 3% das vezes quando dirige; e se atrasa 7% das vezes que pega o ônibus.
+
+1 - Qual é a probabilidade de que ele tenha pego o ônibus, dado que se atrasou?
+
+2 - Qual é a probabilidade de que ele tenha andado a pé, dado que chegou no horário?
+
+<hr>
+Vamos definir os **eventos**:
+
+- W: a pessoa foi ao trabalho andando
+- C: a pessoa foi ao trabalho de carro
+- B: a pessoa foi ao trabalho de ônibus
+- L: a pessoa se atrasou
+- $\overline{L}$: a pessoa chegou no horário
+
+Probabilidades **conhecidas**:
+
+- P(W) = 0,3: 30% das vezes ele vai andando.
+- P(C) = 0,3: 30% das vezes ele vai de carro.
+- P(B) = 0,4: 40% das vezes ele vai de ônibus.
+- P(L|W) = 0,1: Ele se atrasa 10% das vezes que vai andando.
+- P(L|C) = 0,03: Ele se atrasa 3% das vezes que vai de carro.
+- P(L|B) = 0,07: Ele se atrasa 7% das vezes que vai de ônibus.
+
+
+1. Qual é a probabilidade de que ele tenha pego o ônibus, dado que se atrasou?
+Queremos encontrar P(B∣L).
+
+Pelo Teorema de Bayes:
+```math
+P(B|L) = \frac{P(L|B) \cdot P(B)}{P(L)}
+```
+
+Primeiro, precisamos encontrar P(L), a probabilidade de que ele se atrase. Esta é a probabilidade total de ele se atrasar, considerando todas as formas de transporte:
+
+```math
+P(L) = P(L|W) \cdot P(W) + P(L|C) \cdot P(C) + P(L|B) \cdot P(B)
+```
+
+Substituindo os valores:
+
+```math
+P(L) = (0,1 \cdot 0,3) + (0,03 \cdot 0,3) + (0,07 \cdot 0,4)
+```
+```math
+P(L) = 0,03 + 0,009 + 0,028 = 0,067
+```
+Agora, substituímos na fórmula de Bayes para encontrar P(B∣L):
+
+```math
+P(B|L) = \frac{P(L|B) \cdot P(B)}{P(L)}
+```
+```math
+P(B|L) = \frac{0,07 \cdot 0,4}{0,067}
+```
+```math
+P(B|L) \approx \frac{0,028}{0,067} \approx 0,418
+```
+
+Portanto, a probabilidade de que ele tenha pego o ônibus, dado que se atrasou, é aproximadamente 41,8%.
+
 
 ### Referências
+[Lista de exercícios na íntegra](https://mathcenter.oxford.emory.edu/site/math117/probSetBayesTheorem/)
+
 https://byjus.com/maths/multiplication-rule-probability/#:~:text=What%20is%20the%20Multiplication%20Rule,given%20that%20event%20B%20occurs.
 
 https://www.hep.upenn.edu/~johnda/Papers/Bayes.pdf
